@@ -1,0 +1,116 @@
+@font-face {
+   font-family: "KiwiSoda";
+   src: url("fonts/KiwiSoda.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "PixelSans";
+   src: url("fonts/PixelifySans-Medium.ttf") format("truetype");
+   font-weight: normal;
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Base Styles */
+body {
+   background-color: #ffeaf1;
+   font-family: "PixelSans", sans-serif;
+   color: #314708;
+   margin: 0;
+   overflow-x: hidden;
+}
+
+/* Header & Brand */
+h1 {
+   color: #cc007e;
+   font-size: 48px;      
+   font-family: "KiwiSoda", cursive, sans-serif;
+   margin: 0;
+}
+
+.logo {
+   width: 100px;
+   height: auto;
+   margin-right: 12px;
+}
+
+/* Search Bar */
+.search {
+   background-color: #d8f2a6;
+   border: none;
+   border-radius: 999px;
+   padding: 12px 20px 12px 45px;
+   font-size: 14px;
+   
+   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23314708" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
+   background-repeat: no-repeat;
+   background-position: 18px center;
+}
+
+/* Buttons */
+.category-btn {
+   border-radius: 999px;
+   padding: 8px 24px;
+   font-size: 14px;
+   background-color: #f6c1d1;
+   color: #5a3a4a;
+   border: none;
+   transition: 0.2s;
+   white-space: nowrap;
+}
+
+.category-btn.active {
+   background-color: #9dbb61;
+   color: #2f3b1f;
+}
+
+/* Movie Cards */
+.movie-card {
+   width: 100%;
+   height: 300px;
+   border-radius: 20px;
+   overflow: hidden;
+   background-color: #fff;
+   border: 4px solid #283503; 
+   transition: transform 0.2s ease;
+   cursor: pointer;
+}
+
+.movie-card:hover {
+   transform: translateY(-5px);
+}
+
+.movie-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* Placeholder Graphic (Sun/Mountain) */
+.placeholder {
+   background: #eaf4d3;
+   background-image: linear-gradient(to bottom, #9dbb61 0%, #9dbb61 50%, transparent 50%), 
+                     radial-gradient(circle at 50% 40%, #fff 15%, transparent 16%);
+   /* This is a CSS trick to mimic the "landscape" icon without an image file */
+   position: relative;
+}
+
+.placeholder::after {
+    content: "";
+    position: absolute;
+    bottom: 0; left: 0; right: 0; height: 40%;
+    background: #8a9a5b;
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+
+.movie-title {
+   margin-top: 12px;
+   font-family: "PixelSans", sans-serif;
+   font-size: 14px;
+   text-align: center;
+   color: #314708;
+   text-transform: uppercase; /* Matches the all-caps in design */
+}
