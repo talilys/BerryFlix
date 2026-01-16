@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         movieItems.forEach(item => {
             const titleElement = item.querySelector('.movie-title');
             
-            // If the item has a title (Real movies)
+            // If the item has a title Real movies
             if (titleElement) {
                 const titleText = titleElement.textContent.toLowerCase();
                 
